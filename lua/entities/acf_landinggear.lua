@@ -205,6 +205,7 @@ if SERVER then
         Wheel:SetAngles(Physical:LocalToWorldAngles(Angle(0, 90, 0)))
 
         Wheel:GetPhysicsObject():SetVelocity(Physical:GetPhysicsObject():GetVelocity())
+        Wheel:GetPhysicsObject():SetAngleVelocity(Physical:GetPhysicsObject():GetAngleVelocity())
 
         -- Locals for later
         local VecOffset
