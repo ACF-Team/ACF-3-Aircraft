@@ -32,7 +32,7 @@ Components.RegisterItem("LAND-GEAR-ITM", "LAND-GEAR", {
 		WheelZ:SetValue(45)
 
 		local ShowModel = Base:AddCheckBox("Show Model?")
-		ShowModel:SetClientData("ShowModel")
+		ShowModel:SetClientData("ShowModel", "OnChange")
 		ShowModel:SetValue(true)
 
 		ACF.SetClientData("PhysRadius", 9)
