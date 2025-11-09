@@ -156,8 +156,7 @@ if SERVER then
         self:SetVisualModel(ClientData.WheelModel)
         self:SetVisualSizeMul(ClientData.ModelScale or 1)
         self.PhysRadius = ClientData.PhysRadius
-        self.WheelZ     = -ClientData.WheelZ
-
+        self.WheelZ     = ClientData.WheelZ
         if self.Deployed and self:IsSystemValid() then
             self:DestroySystem()
         end
@@ -185,7 +184,7 @@ if SERVER then
         self:DestroySystem()
 
         -- Wheel
-        local WheelZ = self.WheelZ
+        local WheelZ = -self.WheelZ
         local Wheel = ents.Create("prop_physics"); self.Wheel = Wheel; Wheel.DoNotDuplicate = true
         Wheel:SetPos(self:LocalToWorld(Vector(0, 0, WheelZ)))
         --Wheel:SetModel("models/hunter/misc/sphere025x025.mdl")

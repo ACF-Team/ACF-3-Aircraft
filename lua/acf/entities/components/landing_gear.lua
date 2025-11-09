@@ -24,15 +24,15 @@ Components.RegisterItem("LAND-GEAR-ITM", "LAND-GEAR", {
 		Model:SetValue("models/xqm/airplanewheel1.mdl")
 
 		local PhysRadius = Base:AddSlider("Phys. Wheel Radius", 4, 80, 2)
-		PhysRadius:SetClientData(Variable, "PhysRadius")
+		PhysRadius:SetClientData("PhysRadius")
 		PhysRadius:SetValue(9)
 
 		local ModelScale = Base:AddSlider("Model Scale", 0.01, 50, 2)
-		ModelScale:SetClientData(Variable, "ModelScale")
+		ModelScale:SetClientData("ModelScale")
 		ModelScale:SetValue(1)
 
 		local WheelZ = Base:AddSlider("Wheel Height", 10, 256, 2)
-		WheelZ:SetClientData(Variable, "WheelZ")
+		WheelZ:SetClientData("WheelZ")
 		WheelZ:SetValue(45)
 
 		ACF.SetClientData("PhysRadius", 9)
